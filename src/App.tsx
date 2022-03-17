@@ -4,6 +4,7 @@ import SearchFilter from "./components/SearchFilter";
 import people from "./mock-data/people";
 
 import widgets from "./mock-data/widgets";
+import genericSort from "./utils/genericSort";
 import searchByQuery from "./utils/searchByQuery";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           .filter((widget) =>
             searchByQuery(widget, ["title", "description"], query, false)
           )
+          .sort((a, b) => genericSort(a, b, "title"))
           .map((widget) => {
             return (
               <div>
