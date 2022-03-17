@@ -6,7 +6,7 @@ import people from "./mock-data/people";
 import widgets from "./mock-data/widgets";
 import genericSort from "./utils/genericSort";
 import searchByQuery from "./utils/searchByQuery";
-// test
+
 function App() {
   const [query, setSearchQuery] = React.useState("");
   return (
